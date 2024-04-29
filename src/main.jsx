@@ -8,6 +8,7 @@ import App from './App.jsx'
 import HomePage from './pages/HomePage.jsx'
 import ProfilesPage from './pages/ProfilesPage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
+import ProfilePage from './pages/ProfilePage.jsx'
 
 const router = createBrowserRouter([{
   path: '/',
@@ -16,7 +17,13 @@ const router = createBrowserRouter([{
 }, {
   path: '/profiles',
   element: <ProfilesPage />,
-}])
+},
+{
+  path: '/profile/:profileId',
+  element: <ProfilePage />,
+},
+
+])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
